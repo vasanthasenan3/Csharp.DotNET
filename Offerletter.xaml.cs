@@ -21,9 +21,10 @@ namespace offerletter
         {
             InitializeComponent();
         }
-
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+         
             string content = string.Join("|", txtname.Text, txtusernamename.Text, 
                                               txtpassword.Password, txtadress.Text,
                                               txtposition.Text, txtdegree.Text);
