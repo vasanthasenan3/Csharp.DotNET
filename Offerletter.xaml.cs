@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -7,7 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace offerletter
 {
@@ -23,6 +24,39 @@ namespace offerletter
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string content = string.Join("|", txtname.Text, txtusernamename.Text, 
+                                              txtpassword.Password, txtadress.Text,
+                                              txtposition.Text, txtdegree.Text);
+            string rootpath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            string projectfolder = Path.Combine(rootpath, "Employee");
+            Directory.CreateDirectory(projectfolder);
+            string filepath = Path.Combine(projectfolder, $"{txtusernamename.Text}.txt");
+            if(File.Exists(filepath))
+            {
+                MessageBox.Show("Please Choose Diffrent Username");
+            }
+            else
+            {
+                File.WriteAllText(filepath, content);
+                MessageBox.Show("Register Success");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //string offerletter = "Offer Letter\r\n\r\nDate: {date} \r\nName: {name}  \r\nAddress: {adress}  \r\nPosition: {position}  \r\nDegree: {degree}  \r\n\r\nDear {name},  \r\nWe are pleased to offer you the role of {position} Your {degree} makes you a strong fit for our team.  \r\n\r\nSincerely,  \r\n Team Accenture \r\n\r\n\r\n\r\n";
             //offerletter = offerletter.Replace("{date}", DateTime.Now.ToString());
             //offerletter = offerletter.Replace("{adress}", txtadress.Text);
