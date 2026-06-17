@@ -120,23 +120,33 @@ namespace Practiceforunstd2
         }
 
         private void HybridDictionary_Click(object sender, RoutedEventArgs e)
-        {
-
+        {  //HybridDictionary - perform like Hashtable when collections are more and
+           //perform like ListDictionary when collections are small
+            HybridDictionary ohyd = new HybridDictionary();
         }
 
         private void NamevalueCollection_Click(object sender, RoutedEventArgs e)
-        {
+        {   //NameValueCollection - Similar to Hashtable but same named key have one or more values
+            NameValueCollection oname = new NameValueCollection();
+            oname.Add("Name", "Vasanthasenan");
+            oname.Add("Name", "Thiru");
+            oname.Add("Age", "21");
+            oname.Add("Age", "24");
 
         }
 
         private void StringCollection_Click(object sender, RoutedEventArgs e)
-        {
-
+        {   //Similar to Array list But Allows string only.
+            StringCollection ostring = new StringCollection() { "1", "Kani" };
+            ostring.Add("vasanth");
+            ostring.Add("Ishu");
         }
 
         private void StringDictionary_Click(object sender, RoutedEventArgs e)
-        {
-
+        {   //similar to hashtable but allows String Values only
+            StringDictionary osdic = new StringDictionary();
+            osdic.Add("Name", "Thiru");
+            osdic.Add("Age", "21");
         }
     }
 }
