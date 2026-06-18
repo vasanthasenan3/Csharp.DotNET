@@ -5,75 +5,181 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDesign"
         mc:Ignorable="d"
-        Title="Registration" Background="Azure" Height="600" Width="500">
-    <StackPanel Margin="20">
-        <TextBlock HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Acenture Recruitment Portal"></TextBlock>
-        <StackPanel Margin="15">
-            <TextBlock Text="candidate Details" FontSize="19"  Margin="113,0,0,10" FontWeight="DemiBold"></TextBlock>
-            <Border CornerRadius="30" Width="250" Background="Black"  BorderBrush="DarkGray"  BorderThickness="3" Padding="20">
-                <TextBlock Text="&#xE77B;" FontFamily="Segoe MDL2 Assets" Foreground="White" Width="200"  VerticalAlignment="Center" FontSize="18" Margin="0,0,0,0" Background="Transparent">
-                      <ComboBox VerticalAlignment="Center" Margin="10,0,10,0" Background="Yellow" Height="20" Width="150">
-                          <ComboBoxItem Content="Name"></ComboBoxItem>
-                           <ComboBoxItem Content="Mobile"></ComboBoxItem>
-                           <ComboBoxItem Content="Email"></ComboBoxItem>
-                      </ComboBox>
-                </TextBlock>
-                
-              
-            </Border>
-            <TextBlock Text="Job Roles" FontSize="19"  Margin="113,10,0,10" FontWeight="DemiBold"></TextBlock>
-            <Border CornerRadius="30" Width="250" Background="Black"  BorderBrush="DarkGray"  BorderThickness="3" Padding="20">
-                <TextBlock Text="&#xE821;" FontFamily="Segoe MDL2 Assets" Foreground="White" Width="200"  VerticalAlignment="Center" FontSize="18" Margin="0,0,0,0" Background="Transparent">
-           <ComboBox VerticalAlignment="Center" Margin="10,0,10,0" Background="Yellow" Height="20" Width="150">
-               <ComboBoxItem Content="Software Developer"></ComboBoxItem>
-                <ComboBoxItem Content=".NET Developer"></ComboBoxItem>
-                <ComboBoxItem Content="Business Analyst"></ComboBoxItem>
-                <ComboBoxItem Content="UI/UX Designer"></ComboBoxItem>
-           </ComboBox>
-                </TextBlock>
+        Title="Registration" Height="600" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="/image/light-blue-background-gradient-illustration-eps10-vector.jpg"></ImageBrush>
+    </Window.Background>
+   
+    <StackPanel VerticalAlignment="Center"
+                HorizontalAlignment="Center">
 
+        <Border Width="900"
+                Height="520"
+                Background="Azure" 
+                CornerRadius="20">
 
-            </Border>
-           
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" >
-                <TextBlock Text="&#xEC7A;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Width="110"  VerticalAlignment="Center" FontSize="18" Margin="115,0,0,0" Background="Transparent"></TextBlock>
-                <TextBlock Text="Technical Skills" FontSize="19"  Margin="-90,10,0,10" FontWeight="DemiBold"></TextBlock>
-            </StackPanel>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25"
+                                  ShadowDepth="5"
+                                  Opacity="0.3"/>
+            </Border.Effect>
+
             <StackPanel Orientation="Horizontal">
-                <CheckBox Content="C#" Margin="116,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="SQL" Margin="10,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="WPF" Margin="10,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <CheckBox Content="ASP.NET" Margin="116,0,0,0" FontWeight="SemiBold" FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="HTML/CSS" Margin="10,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="JavaScript" Margin="10,0,0,0" FontWeight="SemiBold" FontSize="13" Foreground="Black"></CheckBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" >
-                <TextBlock Text="&#xE7BE;" FontFamily="Segoe MDL2 Assets" Foreground="Black" Width="110"  VerticalAlignment="Center" FontSize="18" Margin="115,0,0,0" Background="Transparent"></TextBlock>
-                <TextBlock Text="Education" FontSize="19"  Margin="-90,10,0,10" FontWeight="DemiBold"></TextBlock>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <CheckBox Content="BE" Margin="116,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="BTech" Margin="10,0,0,0" FontWeight="SemiBold" FontSize="13" Foreground="Black"></CheckBox>
-                <CheckBox Content="MCA" Margin="10,0,0,0" FontWeight="SemiBold"  FontSize="13" Foreground="Black"></CheckBox>
-            </StackPanel>
-            <TextBlock Text="Work Mode" FontSize="19"  Margin="115,10,0,10" FontWeight="DemiBold"></TextBlock>
-            <StackPanel Orientation="Horizontal" >
-                <RadioButton Content="Work From Home" FontSize="13" Margin="115,0,0,0" Foreground="Black" FontWeight="SemiBold"></RadioButton>
-                <RadioButton Content="Work From Office" FontSize="13" Margin="10,0,0,0" Foreground="Black" FontWeight="SemiBold"></RadioButton>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
-                <RadioButton Content="Hybrid" FontSize="13" Margin="115,0,0,0" Foreground="Black" FontWeight="SemiBold"></RadioButton>
+
                
+
+                <Border Width="350"
+                        Height="520"
+                        Background="#36AFF4"
+                        CornerRadius="20,120,120,20">
+
+                    <StackPanel Margin="30">
+                       
+                        <Ellipse Width="100" Height="100"  Margin="0,0,180,0" Stroke="Black" StrokeThickness="2" >
+                            <Ellipse.Fill>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="/image/241-2415195_register-icon-register-icon.png"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBlock Text="STUDENT"
+                                   FontSize="40"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,20,0,0"/>
+
+                        <TextBlock Text="REGISTRATION PORTAL"
+                                   FontSize="20"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="0,10,0,20"/>
+
+                        <TextBlock Text="Manage your profile, skills and preferences."
+                                   Width="250"
+                                   FontSize="15"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Text="Create your academic profile and showcase your skills with a modern registration system."
+                                   Width="260"
+                                   Margin="0,20,0,0"
+                                   FontSize="13"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"/>
+
+                  
+
+                    </StackPanel>
+
+                </Border>
+
+               
+
+                <StackPanel Margin="25">
+
+                    <TextBlock Text="Student Details"
+                               FontSize="30"
+                               FontWeight="SemiBold"
+                               Foreground="#1F2937"
+                               Margin="0,0,0,20"/>
+
+                    <Border Background="Azure" BorderThickness="2" BorderBrush="DarkGoldenrod" Height="410" Width="500">
+                        <StackPanel Margin="15">
+
+                            <TextBlock   Text="Student Name"/>
+
+                            <TextBox Height="40"
+              Margin="0,5,0,10"
+              Padding="10" BorderBrush="DarkGoldenrod" BorderThickness="1.5" />
+
+                            <TextBlock Text="Course"/>
+
+                            <ComboBox BorderBrush="DarkGoldenrod" BorderThickness="2"  Height="40"
+               Margin="0,5,0,10">
+
+                                <ComboBoxItem Content="BCA"/>
+                                <ComboBoxItem Content="B.Sc Computer Science"/>
+                                <ComboBoxItem Content="B.Tech IT"/>
+                                <ComboBoxItem Content="MCA"/>
+
+                            </ComboBox>
+                            <TextBlock Text="Skills"/>
+                            <ListBox  Margin="0,5,0,10" BorderBrush="DarkGoldenrod" BorderThickness="1.5" Height="85" >
+                                <ListBoxItem Content="CSE"></ListBoxItem>
+                                <ListBoxItem Content="Automobile"></ListBoxItem>
+                                <ListBoxItem Content="Solidworks"></ListBoxItem>
+                                <ListBoxItem Content="AutoCad"></ListBoxItem>
+                            </ListBox>
+                            <TextBlock Text="Gender"
+                Margin="0,5"/>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <RadioButton Content="Male" BorderThickness="1.5" BorderBrush="DarkGoldenrod"
+                      Margin="0,0,20,0"/>
+
+                                <RadioButton BorderThickness="1.5" BorderBrush="DarkGoldenrod" Content="Female"
+                      Margin="0,0,20,0"/>
+
+                                <RadioButton BorderThickness="1.5" BorderBrush="DarkGoldenrod" Content="Other"/>
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Border CornerRadius="15" Margin="10,15,250,0" BorderThickness="2" BorderBrush="Black" Background="#0B5CAD" Width="150" Height="45">
+                                    <Button Click="Button_Click" Content="Submit"
+                                     Width="100"
+                                            Cursor="Hand"
+                                     Height="30"
+                                     FontSize="15"                                  
+                                     Margin="0,0,0,0"
+                                     Background="#0B5CAD"
+                                     Foreground="White"
+                                     FontWeight="SemiBold"
+                                     BorderThickness="0"/>
+                                    
+                                    
+                                </Border>
+                                <Border CornerRadius="15" Margin="-300,13,0,0" BorderThickness="2" BorderBrush="Black" Background="DarkRed" Width="150" Height="45">
+                                    <Button Click="Button_Click_1" Content="Clear Form"
+     Width="100"
+     Height="30"
+     Cursor="Hand"                                       
+     FontSize="15"                                  
+     Margin="0,0,0,0"
+     Background="DarkRed"
+     Foreground="White"
+     FontWeight="SemiBold"
+     BorderThickness="0"/>
+
+
+                                </Border>
+                            </StackPanel>
+           
+                
+
+                            </StackPanel>
+                       
+                     
+
+                    </Border>
+                           
+
+                    
+
+                      
+                      
+
+                      
+
+                      
+
+                    
+
+                  
+
+                </StackPanel>
+
             </StackPanel>
-            <Button Content="Apply" Width="200" BorderBrush="Black" BorderThickness="1" Margin="0,15,0,0" FontWeight="DemiBold" FontSize="16" Background="DeepSkyBlue"></Button>
 
+        </Border>
 
-
-
-
-
-        </StackPanel>
     </StackPanel>
 </Window>
