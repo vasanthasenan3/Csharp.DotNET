@@ -1,0 +1,170 @@
+﻿<Page x:Class="DailyDairyApplication.Homedash"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DailyDairyApplication"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="650"
+      Title="Homedash">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Background>
+            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                <GradientStop Color="CadetBlue" Offset="0"></GradientStop>
+                <GradientStop Color="White" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </ScrollViewer.Background>
+        <StackPanel Margin="25">
+
+            <!-- Page Heading -->
+            <TextBlock Text="👋 Welcome Mr Vasanthasenan !" Margin="0,0,0,0" Foreground="Black" FontSize="30" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="My Diary !"
+                     FontSize="28"
+                     FontWeight="Bold"
+                     Foreground="Black"
+                     Margin="15,10,0,15"/>
+
+            <!-- Personal Details -->
+            <Border
+                BorderBrush="Black"
+              
+                  CornerRadius="20"
+                  Padding="20"
+                BorderThickness="2"
+                  Margin="0,0,0,15">
+
+                <!--<Border.Effect>
+                    <DropShadowEffect BlurRadius="10"
+                                    ShadowDepth="2"
+                                    Opacity="0.2"/>
+                </Border.Effect>-->
+
+                <StackPanel>
+
+                    <TextBlock Text="Personal Details"
+                             FontSize="20"
+                             FontWeight="Bold"
+                             Foreground="Black"
+                             Margin="0,0,10,5"/>
+
+                    <!-- Photo -->
+                    <Border Width="120"
+                          Height="120"
+                          CornerRadius="60"
+                          BorderBrush="#6A82FB"
+                          BorderThickness="2"
+                          HorizontalAlignment="Center">
+
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush x:Name="imgProfile"
+                                          Stretch="UniformToFill" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+
+                    </Border>
+
+                    <TextBlock Text="Name"
+                               FontSize="20"
+                             FontWeight="Bold"
+                             Margin="0,20,0,5"/>
+
+                    <TextBlock x:Name="txtName"
+                             FontSize="15"
+                             Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Email"
+                                 FontSize="20"
+                             FontWeight="Bold"
+                             Margin="0,0,0,5"/>
+
+                    <TextBlock x:Name="txtEmail"
+                             FontSize="15"
+                             Margin="0,0,0,10"/>
+
+                    <TextBlock Text="About Me"
+                                 FontSize="20"
+                             FontWeight="Bold"
+                             Margin="0,0,0,5"/>
+
+                    <TextBlock x:Name="txtAboutMe"
+                             TextWrapping="Wrap"
+                             FontSize="15"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- Diary Entries -->
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="2"
+                  CornerRadius="10"
+                  Padding="20"
+                  Height="Auto">
+
+
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10"
+                                    ShadowDepth="2"
+                                    Opacity="0.2"/>
+                </Border.Effect>
+
+                <StackPanel>
+
+                    <TextBlock Text="My Diary Entries"
+                             FontSize="20"
+                               Foreground="Black"
+                             FontWeight="Bold"
+                             Margin="0,0,0,15"/>
+                    <ListView x:Name="lstDiary"
+          Height="300"
+          BorderBrush="Black"
+          BorderThickness="2"
+          ScrollViewer.VerticalScrollBarVisibility="Auto"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Border BorderBrush="#DDDDDD"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="12"
+                    Margin="5">
+
+                                    <StackPanel>
+
+                                        <TextBlock Text="{Binding Date}" Margin="0,0,0,2"
+                               FontWeight="Bold"/>
+
+                                        <TextBlock Text="{Binding Title}"
+                               FontSize="17"
+                               FontWeight="Bold"
+                               Margin="0,2,0,2"/>
+
+                                        <TextBlock Text="{Binding Mood}"
+                               Foreground="DarkBlue"
+                               Margin="0,4,0,0"/>
+
+                                        <TextBlock Text="{Binding Content}"
+                               TextWrapping="Wrap"
+                               Margin="0,2,0,0"/>
+
+                                    </StackPanel>
+
+                                </Border>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </StackPanel>
+
+            </Border>
+
+        </StackPanel>
+
+    </ScrollViewer>
+</Page>

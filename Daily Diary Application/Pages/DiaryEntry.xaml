@@ -1,0 +1,148 @@
+﻿<Page x:Class="DailyDairyApplication.DiaryEntry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DailyDairyApplication"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="800"
+          Title="DiaryEntry">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                <GradientStop Color="CadetBlue" Offset="0"></GradientStop>
+                <GradientStop Color="White" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <!-- Main Card -->
+        <Border Margin="25"
+         CornerRadius="20"
+        
+         Padding="25">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <StackPanel>
+                    <TextBlock Text="📝 Create New Diary Entry"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Foreground="Black"/>
+
+                    <TextBlock Text="Write your thoughts, memories and experiences..."
+                        FontSize="14"
+                        Foreground="Black"
+                        Margin="5,5,0,20"/>
+                </StackPanel>
+
+                <!-- Title -->
+                <!-- Title + Date -->
+                <StackPanel Grid.Row="1">
+
+                    <!-- Title -->
+                    <Border Margin="0,15,0,0"
+Background="#F8FAFF"
+CornerRadius="12"
+BorderBrush="Black"
+BorderThickness="2">
+
+                        <TextBox Height="45"
+     Name="txttittle"
+     Text="Diary Title..."
+     FontSize="16"
+     Padding="10"
+     BorderThickness="0"
+     Background="Transparent"/>
+                    </Border>
+                    <!-- Date -->
+                    <!-- Date -->
+                    <Border Margin="0,15,0,0"
+        Background="#F8FAFF"
+        CornerRadius="12"
+        BorderBrush="Black"
+        BorderThickness="2">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="45" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Date TextBox -->
+                            <TextBox x:Name="txtdate"
+                 Grid.Column="0"
+                 Height="45"
+                 FontSize="16"
+                 Padding="10"
+                 BorderThickness="0"
+                 Background="Transparent"
+                 IsReadOnly="True"
+                 VerticalContentAlignment="Center"/>
+
+                            <!-- DatePicker -->
+                            <DatePicker x:Name="dpDate"
+                    Grid.Column="1"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    SelectedDateChanged="dpDate_SelectedDateChanged_1"/>
+                        </Grid>
+
+                    </Border>
+
+                </StackPanel>
+
+                <!-- Diary Content -->
+                <Border Grid.Row="2"
+                 Margin="0,10,0,-20"
+                 Background="#F8FAFF"
+                 CornerRadius="15"
+                 BorderBrush="Black"
+                 BorderThickness="2">
+
+                    <TextBox AcceptsReturn="True"
+                            Name="txtcontent" 
+                      TextWrapping="Wrap"
+                      VerticalScrollBarVisibility="Auto"
+                      FontSize="16"
+                      Padding="15"
+                      BorderThickness="0"
+                      Background="Transparent"
+                      Text="Start writing here..."/>
+                </Border>
+
+                <!-- Buttons -->
+                <StackPanel Margin="0,25,0,0" Grid.Row="3"
+                     Orientation="Horizontal"
+                     HorizontalAlignment="Center">
+
+                   
+
+                    <Button Content="💾 Save Entry"
+                     Width="790"
+                            Margin="10,10,10,10"
+                            FontSize="15"
+                     Click="Button_Click"
+                     Height="45"
+                    
+                     FontWeight="Bold"
+                            BorderBrush="Black"
+                            BorderThickness="2"
+                     Background="Transparent"
+                     Foreground="Black"
+                     />
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Page>
